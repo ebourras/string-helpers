@@ -1,3 +1,4 @@
+package com.ebourras.stringutils;
 
 public class StringCommonAlgorithms {
     public static void main(String [] args) {
