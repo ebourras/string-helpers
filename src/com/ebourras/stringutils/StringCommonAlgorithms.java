@@ -15,18 +15,18 @@ public class StringCommonAlgorithms {
      * @param k
      * @return
      */
-    private static String findSmallestAndLargestSubString(String phrase, int k) {
+    private static String findSmallestAndLargestSubString(String phrase, int lengthOfSubstring) {
 
-        String smallest = phrase.substring(0, k);
-        String largest = phrase.substring(0, k);
+        String smallest = phrase.substring(0, lengthOfSubstring);
+        String largest = phrase.substring(0, lengthOfSubstring);
 
         String temporarySubString = "";
 
-        for (int i = 0; i < phrase.length() && i + k <= phrase.length() ; i++) {
+        for (int i = 0; i < phrase.length() && i + lengthOfSubstring <= phrase.length() ; i++) {
 
-                temporarySubString = phrase.substring(i, i + k);
+                temporarySubString = phrase.substring(i, i + lengthOfSubstring);
 
-                if (temporarySubString.length() == k) {
+                if (temporarySubString.length() == lengthOfSubstring) {
 
                     if (temporarySubString.compareTo(largest) >= 0) {
                         largest = temporarySubString;
